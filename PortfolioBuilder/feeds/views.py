@@ -16,3 +16,8 @@ def home_page(request, username):
     }
 
     return render(request, 'home_page.html', context)
+
+
+def create_portfolio(request):
+    
+    return render(request, 'create_form.html')
