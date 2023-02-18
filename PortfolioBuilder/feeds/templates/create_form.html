@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
       <!-- Icons font CSS-->
       <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
       <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
@@ -110,10 +111,7 @@
     /**
      * Remove trailing margins from nested lists.
      */
-    li > ol,
-    li > ul {
-      margin-bottom: 0;
-    }
+  
     
     /**
      * Remove default table spacing.
@@ -381,23 +379,30 @@
       font-family: inherit;
     }
     
-    .input--style-4 {
-      line-height: 50px;
-      background: #fafafa;
-      -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
-      -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
-      box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      padding: 0 20px;
-      font-size: 16px;
-      color: #666;
-      -webkit-transition: all 0.4s ease;
-      -o-transition: all 0.4s ease;
-      -moz-transition: all 0.4s ease;
-      transition: all 0.4s ease;
-    }
+.input--style-4 {
+  line-height: 50px;
+  background: #fafafa;
+  -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #666;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  padding-left:20px;
+}
+
     
     .input--style-4::-webkit-input-placeholder {
       /* WebKit, Blink, Edge */
@@ -502,11 +507,7 @@
       position: absolute;
       display: none;
     }
-    
-    .input-group {
-      position: relative;
-      margin-bottom: 22px;
-    }
+   
     
     .input-group-icon {
       position: relative;
@@ -663,7 +664,7 @@
       }
     }
     .input-group {
-          margin: 10px 0;
+          margin: 10px 3;
         }
     
         .label {
@@ -693,36 +694,7 @@
           padding: 0 0 7px 0;
           width: 100%;
         }
-    
-        .slider {
-          -webkit-appearance: none;
-          width: 100%;
-          height: 10px;
-          border-radius: 5px;
-          background: #ccc;
-          outline: none;
-          opacity: 0.7;
-          -webkit-transition: .2s;
-          transition: opacity .2s;
-        }
-    
-        .slider::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          appearance: none;
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          background: #4CAF50;
-          cursor: pointer;
-        }
-    
-        .slider::-moz-range-thumb {
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          background: #4CAF50;
-          cursor: pointer;
-        }
+
     
         .submit-btn {
           background-color: #4CAF50;
@@ -736,7 +708,62 @@
           margin: 10px 0;
           cursor: pointer;
         }
-    
+        .skills {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.select--style-4 {
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #f1f1f1;
+}
+
+.input--style-4 {
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #f1f1f1;
+  width: 100%;
+  box-sizing:
+}
+        
+.textarea--style-4 {
+  width: 100%;
+  height: 100px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid #ccc;
+  margin-bottom: 20px;
+}
+
     </style>
     
 </head>
@@ -755,67 +782,111 @@
 <h2>Personal Information</h2>
 <div class="personal_information">
   <div class="personal_information">
-  <div class="input-group">
-    <label class="label">Full Name</label>
-    <input class="input--style-4" type="text" name="name_complete">
-  </div>
-  <div class="input-group">
-    <label class="label">Avatar URL</label>
-    <input class="input--style-4" type="url" name="avatar">
-  </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="input-group">
+          <label class="label">Full Name</label>
+          <input class="input--style-4" type="text" name="name_complete">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="input-group">
+          <label class="label">Phone</label>
+          <input class="input--style-4" type="tel" name="phone">
+        </div>
+      </div>
+      <div class="col-md-3"> 
+        <div class="input-group">
+          <label class="label">Address</label>
+          <input class="input--style-4" type="text" name="address">
+        </div>
+      </div>
+      <div class="col-md-3">
+      <div class="input-group">
+        <label class="label">Email</label>
+        <input class="input--style-4" type="email" name="email">
+      </div>
+      </div>
+    </div>
   <div class="input-group">
     <label class="label">Mini About</label>
     <textarea class="textarea--style-4" name="mini_about"></textarea>
   </div>
-  <div class="input-group">
-    <label class="label">Address</label>
-    <input class="input--style-4" type="text" name="address">
-  </div>
-  <div class="input-group">
-    <label class="label">Phone</label>
-    <input class="input--style-4" type="tel" name="phone">
-  </div>
-  <div class="input-group">
-    <label class="label">Email</label>
-    <input class="input--style-4" type="email" name="email">
-  </div>
-  <div class="input-group">
-    <label class="label">CV URL</label>
-    <input class="input--style-4" type="url" name="cv">
-  </div>
   
-  <div class="input-group">
-    <label class="label">GitHub URL</label>
-    <input class="input--style-4" type="url" name="github">
-  </div>
-  <div class="input-group">
-    <label class="label">LinkedIn URL</label>
-    <input class="input--style-4" type="url" name="linkedin">
-  </div>
-  <div class="input-group">
-    <label class="label">Facebook URL</label>
-    <input class="input--style-4" type="url" name="facebook">
-  </div>
-  <div class="input-group">
-    <label class="label">Twitter URL</label>
-    <input class="input--style-4" type="url" name="twitter">
-  </div>
+
+  		<!-- My Links Section -->
+<h2>My Links</h2>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="input-group">
+        <label class="label">Avatar URL</label>
+        <input class="input--style-4" type="url" name="avatar">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="input-group">
+        <label class="label">CV URL</label>
+        <input class="input--style-4" type="url" name="cv">
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="input-group">
+        <label class="label">GitHub URL</label>
+        <input class="input--style-4" type="url" name="github">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="input-group">
+        <label class="label">LinkedIn URL</label>
+        <input class="input--style-4" type="url" name="linkedin">
+      </div>
+    </div>
+
+  </div>  
+ 
+  
+  <div class="row">
+    <div class="col-md-3">
+      <div class="input-group">
+        <label class="label">Facebook URL</label>
+        <input class="input--style-4" type="url" name="facebook">
+      </div>
+
+    </div>
+    <div class="col-md-3">
+      <div class="input-group">
+        <label class="label">Twitter URL</label>
+        <input class="input--style-4" type="url" name="twitter">
+      </div>
+    </div>
+    <div class="col-md-3">
+      
   <div class="input-group">
     <label class="label">Instagram URL</label>
     <input class="input--style-4" type="url" name="instagram">
   </div>
-  <div class="input-group">
-    <label class="label">MyCV URL</label>
-    <input class="input--style-4" type="url" name="mycv">
+      
+    </div>
+    <div class="col-md-3">
+      <div class="input-group">
+        <label class="label">MyCV URL</label>
+        <input class="input--style-4" type="url" name="mycv">
+      </div>
+      
+    </div>
+
   </div>
-</div>
+  
+  
+
 		<!-- Skills Section -->
 <h2>Skills</h2>
 <div class="skills">
   <div class="skill">
     <div class="input-group">
       <label class="label">Skill</label>
-      <select class="select--style-4" name="skill_3">
+      <select class="select--style-4" name="skill_1" onchange="removeSelectedOption(this)">
         <option value="">--Select a skill--</option>
         <option value="Python">Python</option>
         <option value="Java">Java</option>
@@ -824,10 +895,13 @@
     </div>
     <div class="input-group">
       <label class="label">Skill Rating (1-100)</label>
-      <input class="input--style-4" type="number" name="skill_rating_3" min="1" max="100">
+      <input class="input--style-4" type="number" name="skill_rating_1" min="1" max="100">
     </div>
   </div>
 </div>
+
+
+<button onclick="addSkill()" class="btn btn--blue">Add more</button>
 </form> 
 </div>  
 
@@ -835,4 +909,43 @@
 </div>  
 </div>  
 </body>
+<script>
+  function removeSelectedOption(selectElement) {
+    const selectedOption = selectElement.value;
+    const options = selectElement.options;
+    for (let i = 0; i < options.length; i++) {
+      if (options[i].value === selectedOption) {
+        options[i].disabled = true;
+      } else {
+        options[i].disabled = false;
+      }
+    }
+  }
+
+  function addSkill() {
+    
+    const skills = document.querySelector(".skills");
+    const skillCount = skills.querySelectorAll(".skill").length;
+    const newSkill = `
+      <div class="skill">
+        <div class="input-group">
+          <label class="label">Skill</label>
+          <select class="select--style-4" name="skill_${skillCount + 1}" onchange="removeSelectedOption(this)">
+            <option value="">--Select a skill--</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="JavaScript">JavaScript</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label class="label">Skill Rating (1-100)</label>
+          <input class="input--style-4" type="number" name="skill_rating_${skillCount + 1}" min="1" max="100">
+        </div>
+      </div>
+    `;
+    skills.insertAdjacentHTML("beforeend", newSkill);
+  }
+</script>
 </html> 
+
+
